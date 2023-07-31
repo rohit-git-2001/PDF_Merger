@@ -7,6 +7,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, "template/index.html"))
 })
 
+app.post('/merge', upload.array('photos', 12), function (req, res, next) {
+
+})
+
 app.listen(port, () => {
     console.log(`Example app listening on port http://localhost:${port}`)
 })
